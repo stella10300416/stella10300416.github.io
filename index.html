@@ -1,30 +1,174 @@
-<html> 
+<!DOCTYPE html>
+<html lang="en">
 
-<head> 
-<title> My Personal Website </title>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5P4DWGRNX8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5P4DWGRNX8');
-</script>
+<head>
+    <meta charset="UTF-8">
+    <title>My Bakery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
 
-<body bgcolor="sky blue" text="pink">
+/* Reset some default styles */
+body, figure, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
 
-<h1> My first page </h1>
+/* Set up basic styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-This is my first web page and I can say anything I want in here - I do that by putting text or images in the body section - where I'm typing right now :)
-  
-<br>
-<img src="download.jfif" alt="dessert1" width="104" height="142">
-<img src="download(1).jfif" alt="dessert2" width="104" height="142">
-<img src="download(2).jfif" alt="dessert3" width="104" height="142">
-<br>
-  <p>testing</p> 
+header {
+    background-color: #f8e8c1;
+    padding : 20px;
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+justify-content: center;
+}
+
+nav li {
+margin-right: 20px;
+}
+
+nav a {
+color: #333;
+text-decoration: none;
+}
+
+section {
+padding: 40px;
+}
+
+#home {
+background-color: #ffdab9;
+text-align: center;
+}
+
+#menu {
+background-color: #fff;
+}
+
+#menu ul {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+#menu li {
+width: 300px;
+margin: 20px;
+}
+
+#about {
+background-color: #f8e8c1;
+}
+
+#contact {
+background-color: #fff;
+text-align: center;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 400px;
+margin: 0 auto;
+}
+
+form label, form textarea, form input[type="email"] {
+margin-bottom: 10px;
+width: 100%;
+}
+
+form textarea {
+height: 100px;
+}
+
+form button[type="submit"] {
+background-color: #ffdab9;
+color: #333;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+header {
+padding: 10px;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to My Bakery</h1>
+        <p>Freshly baked goods made with love</p>
+    </section>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul>
+            <li>
+                <img src="menu_item1.jpg" alt="Menu Item 1">
+                <h3>Cupcakes</h3>
+                <p>Delicious cupcakes with various flavors and frostings.</p>
+            </li>
+            <li>
+                <img src="menu_item2.jpg" alt="Menu Item 2">
+                <h3>Breads</h3>
+                <p>Freshly baked breads including sourdough, baguettes, and more.</p>
+            </li>
+            <li>
+                <img src="menu_item3.jpg" alt="Menu Item 3">
+                <h3>Pastries</h3>
+                <p>Delectable pastries such as croissants, danishes, and eclairs.</p>
+            </li>
+        </ul>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a family-owned bakery dedicated to providing our customers with the freshest and most delicious baked
+            goods. Our recipes have been passed down for generations, and we take pride in using only the finest
+            ingredients in our products.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to contact us using the form below:</p>
+        <form id="contact-form" action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 My Bakery. All rights reserved. | Website by [Your Name]</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
